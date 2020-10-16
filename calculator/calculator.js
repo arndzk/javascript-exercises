@@ -1,25 +1,42 @@
-function add () {
-	
+function add (x, y) {
+	const result = x + y;
+	return result;
 }
 
-function subtract () {
-	
+function subtract (x, y) {
+	const result = x - y;
+	return result;
 }
 
-function sum () {
-	
+function sum (values) {
+	let result = 0;
+	for (let i = 0; i < values.length; i++) {
+		result += values[i];
+	}
+	return result;
 }
 
-function multiply () {
-	
+function multiply (values) {
+	let result = values[0];
+	for(let i = 1; i < values.length; i++) {
+		result *= values[i];
+	}
+	return result;
 }
 
-function power() {
-	
+function power(x, y) {
+	const result = x ** y;
+	return result;
 }
 
-function factorial() {
-	
+function factorial(num) {
+	if (num < 0) {
+		return -1;
+	} else if (num == 0) {
+		return 1;
+	} else {
+		return (num * factorial(num - 1));
+	}
 }
 
 module.exports = {
